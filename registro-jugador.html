@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SPORT-SITE</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="js/bootstrap.min.js">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	  <!-- Include Date Range Picker -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+	<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+	<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+	<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+	<!--Font Awesome (added because you use icons in your prepend/append)-->
+	<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="est-registro.css">
 </head>
 <body>
 
-<!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
-<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
-
-<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-
-<!--Font Awesome (added because you use icons in your prepend/append)-->
-<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+<div class="container">
+	<header>
+		<nav class="navbar navbar-fixed-top navbar-inverse ">
+			<div class="container-fluid">
+				<div  class="navbar-header">
+					<!-- <a> es el nombre del proyecto, se puede reemplazar por un logo... **consultar** -->
+					<a href="inicio.html" class="navbar-brand">SPORT-SITE</a>	
+				</div>
+			</div>
+		</nav>
+	</header>
+</div>
 
 <!-- Inline CSS based on choices in "Settings" tab -->
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
@@ -43,11 +60,12 @@
 	        <label for="apellidos" class="sr-only">Apellidos</label>
 	        <input type="text" id="apellidos" class="form-control" placeholder="Apellidos" required autofocus>
 	        
-	        <label for="categoria" class="sr-only">Categoría</label>
-	        <input type="text" id="categoria" class="form-control" placeholder="Categoría" required autofocus> 
 
 	        <label for="usuario" class="sr-only">Club Perteneciente</label>
 	        <input type="text" id="club" class="form-control" placeholder="Club Perteneciente" required autofocus>
+
+	        <label for="categoria" class="sr-only">Categoría</label>
+	        <input type="text" id="categoria" class="form-control" placeholder="Categoría" required autofocus>
 	        </div>
 	    </form>
     </div>
@@ -63,25 +81,35 @@
 	        <div class="input-group-addon">
 	         <i class="fa fa-calendar"></i>
 	        </div>
-	        <input class="form-control" id="date" name="date" placeholder="MM/DD/AAAA" type="text"/>
+	        <input class="form-control" id="date" name="date" placeholder="Fecha de nacimiento" type="text"/>
 	       </div>
 	      </div>
+	     <form role="form">
+		 	<h3><small>Intereses:</small></h3>
+				<label class="checkbox-inline">
+			    	<input type="checkbox" value="">Fútbol
+			    </label>
+			    <label class="checkbox-inline">
+			      <input type="checkbox" value="">Basket
+			    </label>
+			    <label class="checkbox-inline">
+			      <input type="checkbox" value="">Béisbol
+			    </label>
+		</form>
 	     </div>
+	     <br/>
 	     <!-- Boton de registro -->
-	     <button class="btn btn-lg btn-primary btn-block" type="submit">Registrar</button>
+	     <button class="btn btn-lg btn-primary btn-block" type="button">Registrar</button>
+	     <br/>
+	     <div>
+	     	<a href="inicio.html">Regresar</a>
+	     </div>
 	    </form>
 	   </div>
 	 </div>
 	</div>
 
-<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
-<!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
+<!-- Codigo js para el calendario -->
 <script>
 	$(document).ready(function(){
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
