@@ -18,8 +18,9 @@
 
 	<script type="text/javascript">
 	function validacion(){
-		if(document.usuario.value.length==0){
-			alert("El campo de texto esta vacio");
+		var x = document.getElementById("usuario").value;
+		if(x == "jugador"){
+			alert("Ir a la pagina del jugador");
 			return false;
 		}
 		return true
