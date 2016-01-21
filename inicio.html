@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SPORT-SITE</title>
@@ -14,6 +15,16 @@
 		color: white;
 	}
 	</style>
+
+	<script type="text/javascript">
+	function validacion(){
+		if(document.usuario.value.length==0){
+			alert("El campo de texto esta vacio");
+			return false;
+		}
+		return true
+	}
+	</script>
 
 </head>
 <body>
@@ -38,12 +49,13 @@
 	                		<a href="#"><span class="glyphicon glyphicon-user"></span>Admin</a>
 	                	</div>
 	                    <div class="form-group">
-	                		<input type="text" placeholder="Usuario" class="form-control">
+	                		<input type="text" id="usuario" placeholder="Usuario" class="form-control">
 	                	</div>
 	                	<div class="form-group">
 	                		<input type="password" placeholder="Contraseña" class="form-control">
 	                    </div>
-	                    <button type="submit" class="btn btn-success">Entrar</button>
+	                    <!-- aqui esta lo del profe -->
+	                    <button type="submit" class="btn btn-success" onclick="return validacion();">Entrar</button>
 	                </div>
 	            </div>
 			</div>
