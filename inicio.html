@@ -19,8 +19,28 @@
 	<script type="text/javascript">
 	function validacion(){
 		var x = document.getElementById("usuario").value;
+		if(x == "administrador"){
+			window.location = "administrador.html";
+			return false;
+		}
 		if(x == "jugador"){
-			alert("Ir a la pagina del jugador");
+			window.location = "perfil-jugador.html";
+			return false;
+		}
+		if(x == "cazatalento"){
+			window.location = "perfil-cazador-de-talentos.html";
+			return false;
+		}
+		if(x == "liga"){
+			window.location = "perfil-representante-liga.html";
+			return false;
+		}
+		if(x == "federacion"){
+			window.location = "perfil-representante-federacion.html";
+			return false;
+		}
+		if(x == "club"){
+			window.location = "perfil-club.html";
 			return false;
 		}
 		return true
@@ -42,7 +62,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!-- <a> es el nombre del proyecto, se puede reemplazar por un logo... **consultar** -->
-					<a href="#" class="navbar-brand">SPORT-SITE</a>	
+					<a href="inicio.html" class="navbar-brand">SPORT-SITE</a>	
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 	                <div class="navbar-form navbar-right">

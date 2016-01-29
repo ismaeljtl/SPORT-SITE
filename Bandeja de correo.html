@@ -1,0 +1,158 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bandeja de Correo</title>
+  <link type="text/css" rel="stylesheet" href="css/tab.css"></script> 
+
+
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/skinable_tabs.min.js"></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/combobox.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="est-registro.css">
+
+ 
+</head>
+<body brcolor="#D71313">
+<div class="container">
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-inverse ">
+      <div class="container-fluid">
+        <div  class="navbar-header">
+          <!-- <a> es el nombre del proyecto, se puede reemplazar por un logo... **consultar** -->
+          <a href="pagina-inicio.html" class="navbar-brand">SPORT-SITE</a> 
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<br>
+
+<div class="col-md-4 col-md-offset-4">
+  <form action="Envio de correo.html">
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Redactar</button>
+  </form>
+
+</div>
+ 
+
+        <br><br><br>
+<div class="tabs_holder">
+  <div class="col-md-10">
+          <label class="checkbox-inline">
+              <input type="checkbox" value="">Fútbol
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Basket
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Béisbol
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Perfil
+            </label><label class="checkbox-inline">
+              <input type="checkbox" value="" checked>Mensajes
+            </label><label class="checkbox-inline">
+              <input type="checkbox" value="">Compras
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Buscar
+            </label>
+        </div>
+  <br><br><br>
+ <ul>
+  <li class="tab_selected"><a href="#your-tab-id-1">Bandeja de Correo</a></li>
+  <li ><a href="#your-tab-id-2">Enviados</a></li>
+   <li><a href="#your-tab-id-3">Eliminados</a></li>
+    
+ </ul>
+ <div class="content_holder">
+  <div id="your-tab-id-1" align="left">
+    <h1 >Organizar por:</h1>
+
+<form class="demo" style="margin-left: 190px">
+  
+  <select >
+  
+    <option>Asunto </option>
+    <option>Contenido</option>
+    <option>Fecha</option>
+
+  </select>
+</form>
+   <!-- <div class="col-md-10">
+          <label class="checkbox-inline">
+              <input type="checkbox" value="">Fútbol
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Basket
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Béisbol
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Perfil
+            </label><label class="checkbox-inline">
+              <input type="checkbox" value="" checked>Mensajes
+            </label><label class="checkbox-inline">
+              <input type="checkbox" value="">Compras
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value="">Buscar
+            </label>
+        </div>-->
+  
+  <form class="demo" style="margin-left: 990px">
+  <p><b>Mostrar Correos:</b></p>
+  <select >
+  
+    <option>Leidos </option>
+    <option>No Leidos</option>
+    <option>Todos</option>
+</form>
+  </select>
+</form>
+              <label class="checkbox">
+              <input type="checkbox" value="">Ha recibido un correo de Cristiano Ronaldo.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="">Ha recibido un correo de Stephen Curry.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="">Ha recibido un correo de Bob Abreu.
+            </label>
+  </div>
+  <div id="your-tab-id-2" align="left" style="margin-left:100px">
+        <label class="checkbox">
+              <input type="checkbox" value="">Mensaje enviado a  de Lebron James.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="">Mensaje enviado a James Rodrigues.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="">Mensaje enviado a  Luis Enrique.
+            </label>
+  </div>
+  <div id="your-tab-id-3">
+   <h1>No ha eliminado ningun correo por ahora.</h1>
+  </div>
+
+ </div><!-- /.content_holder -->
+</div><!-- /.tabs_holder -->
+
+<script type="text/javascript">
+  $('.tabs_holder').skinableTabs({
+    effect: 'overlapping',
+    skin: 'skin8',
+    position: 'left'
+  });
+</script>
+
+</body>
+</html>
